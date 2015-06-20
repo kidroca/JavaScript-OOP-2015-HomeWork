@@ -24,7 +24,7 @@ function solve() {
 		}
 
 		function validateName(str) {
-			var reInvalidChars = /[^A-z]/;
+			var reInvalidChars = /[^A-Za-z]/;
 
 			if (typeof(str) !== 'string') {
 				throw new Error('The name must be a string');
