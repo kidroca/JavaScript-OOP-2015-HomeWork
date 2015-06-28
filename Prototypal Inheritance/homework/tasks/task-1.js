@@ -109,7 +109,7 @@ function solve() {
 			for(i = 0, len = orderedNames.length; i < len; i += 1) {
 
 				parsed += orderedNames[i]
-				 + '=' + '"' + attributes[orderedNames[i]] + '" ';
+				 	+ '=' + '"' + attributes[orderedNames[i]] + '" ';
 			}
 
 			return parsed;
@@ -164,6 +164,7 @@ function solve() {
 				}
 				if (!value) {
 
+					//if no value do something
 					value = '';
 				}
 
@@ -180,7 +181,7 @@ function solve() {
 
 				} else {
 
-					throw new Error('No such attribute');
+					throw new Error('No such attribute!');
 				}
 
 				return this;
