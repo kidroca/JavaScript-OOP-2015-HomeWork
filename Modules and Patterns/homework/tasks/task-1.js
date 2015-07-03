@@ -151,10 +151,18 @@ function solve() {
 			studentID,
 			score;
 
+		if(!Array.isArray(results))
+		{
+			throw {
+				name: "Incorect Exam Results Input",
+				message: "Expected results to be submitted as an array"
+			};
+		}
+
 		for (i = 0, len = results.length; i < len; i += 1) {
 			studentID = results[i].StudentID;
 			checkValidIdFormat(studentID);
-			score = results[i].Score;
+			score = results[i].score;
 
 			updateStudentScores(this.students[studentID - 1], score);
 
